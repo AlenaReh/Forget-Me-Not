@@ -1,6 +1,30 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title": "Test Title",
+        "text": "Test text"
+    },
+    {
+        "title": "NCootfee ",
+        "text": "coffee"
+    },
+    {
+        "title": "My note",
+        "text": "this is my awesome note"
+    },
+    {
+        "title": "mmmm",
+        "text": "mmm"
+    },
+    {
+        "title": "ooo",
+        "text": "ooo"
+    },
+    {
+        "title": "Dinner",
+        "text": "Make Chicken Alfredo"
+    },
+    {
+        "title": "Laundry",
+        "text": "kids' clothes, towels"
     }
 ]

@@ -1,20 +1,20 @@
 const express = require('express');
 const path = require('path');
-
+const { clog } = require('./middleware/clog');
+const app = express();
 const PORT = process.env.port || 3001;
 
-const app = express();
 
 // Middleware for parsing JSON and urlencoded form data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // app.use('/api', api);
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //GET Routes
-const apiroutes = require('./routes/APIroutes')(app);
-const htmlroutes = require('./routes/HTMLroutes')(app);
+require('./routes/APIroutes')(app);
+require('./routes/HTMLroutes')(app);
 
 //We are listening
 app.listen(PORT, () =>

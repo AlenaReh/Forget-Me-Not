@@ -1,14 +1,24 @@
 {
-  "name": "note-taker",
+  "name": "forget-me-not",
   "version": "1.0.0",
-  "description": "",
+  "description": "This application can be used to write and save notes.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "",
+  "author": "Alena Rehberger",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlenaReh/Forget-Me-Not.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlenaReh/Forget-Me-Not/issues"
+  },
+  "homepage": "https://github.com/AlenaReh/Forget-Me-Not#readme"
 }
