@@ -1,6 +1,7 @@
 # Forget-Me-Not
 
 https://github.com/AlenaReh/Forget-Me-Not
+
 https://forgetmenot-notetaker.herokuapp.com/notes
 
 ## Description 
@@ -22,6 +23,7 @@ A simple application to stay on top of your daily tasks. It uses an Express.js b
 ## Demo 
 
   * ![demo_still](public/assets/images/demo.png)
+  * ![demo_still](public/assets/images/demo2.png)
 
 ## Contributions
 Alena Rehberger
