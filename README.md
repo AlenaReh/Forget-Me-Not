@@ -22,8 +22,10 @@ A simple application to stay on top of your daily tasks. It uses an Express.js b
 
 ## Demo 
 
-  * ![demo_still](public/assets/images/demo.png)
+  * ![demo_still](public/assets/images/demo1.png)
   * ![demo_still](public/assets/images/demo2.png)
+  * ![demo_still](public/assets/images/demo3.png)
+  
 
 ## Contributions
 Alena Rehberger
