@@ -5,7 +5,6 @@ const util = require('util');
 const readFromFile = util.promisify(fs.readFile);
 const readingData = () => {
   return  readFromFile("./db/db.json", 'utf-8'); 
-
 }
 /*
  *  Function to write data to the JSON file given a destination and some content
@@ -35,7 +34,6 @@ const readAndAppend = (content, file) => {
     }
   });
   console.log("readAndAppend", readAndAppend, fs.readFile);
-
 };
 
 module.exports = { readFromFile, writeToFile, readAndAppend , readingData};

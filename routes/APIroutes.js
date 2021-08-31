@@ -1,6 +1,7 @@
 const {readAndAppend, readFromFile, readingData, writeToFile} = require("../helpers/fsUtils");
 let storeNotes;
 const fs = require("fs");
+const { ADDRGETNETWORKPARAMS } = require("dns");
 
 module.exports = function (app) {
   app.get("/api/notes", function (req, res) {
@@ -24,11 +25,36 @@ module.exports = function (app) {
   });
 
   app.post("/api/notes", function (req, res) {
-    console.log("New Note", req.body);
+    // console.log("New Note", req.body);
     storeNotes.push(req.body);
-    console.log("Combined Notes", storeNotes);
+    // console.log("Combined Notes", storeNotes);
 
-    writeToFile("./db/db.json", storeNotes);
+    writeToFile("./db/db.json", storeNotes, err => {
+        if(err) 
+        throw(err);
+    });
     res.json(true);
   });
+
+    //to delete notes
+    app.delete('/api/notes/:id', (req, res) => {
+        const deletedNote = parseInt(req.params.id);
+        let newStoreNotes = [];
+        fs.readFile('./db/db.json', (data) => {
+            storeNotes = JSON.parse(data);
+            for (let i=0; i<storeNotes.length; i++){
+                if(deletedNote !== storeNotes[i].id){
+                    newStoreNotes.push(storeNotes[i])
+                }
+            }
+            return newStoreNotes
+        }).then(function(storeNotes){
+            fs.writeToFile('./db/db.json', JSON.stringify(storeNotes))
+            console.log('Sucsess!')
+        });
+
+    })
+
+
 };
+
